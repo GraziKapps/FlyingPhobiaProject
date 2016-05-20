@@ -1,0 +1,216 @@
+fileFormatVersion: 2
+guid: 56cc52e8e7700404ab6d1da869e426b1
+timeCreated: 1463171408
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Cadeira_LOW
+    100002: Cadeira_LOW003
+    100004: Cadeira_LOW004
+    100006: Cadeira_LOW005
+    100008: floor075
+    100010: floor076
+    100012: GuardaVolumes049
+    100014: GuardaVolumes050
+    100016: GuardaVolumes051
+    100018: GuardaVolumes052
+    100020: //RootNode
+    100022: Object004
+    100024: Object005
+    100026: Object006
+    100028: Object007
+    100030: Overhead_Locker025
+    100032: Panel_Window_Glass024
+    100034: Panel_Window_shutter_245
+    100036: Panel_Window_shutter_246
+    100038: Panel_Window_shutter_247
+    100040: Panel_Window_shutter_248
+    100042: Panel_Window_shutter_249
+    100044: Panel_Window_shutter_250
+    100046: Panel_Window_shutter_251
+    100048: Panel_Window_shutter_252
+    100050: Placa numero
+    100052: Placa numero001
+    100054: Placa numero002
+    100056: Placa numero003
+    100058: Tela Poltrona
+    400000: Cadeira_LOW
+    400002: Cadeira_LOW003
+    400004: Cadeira_LOW004
+    400006: Cadeira_LOW005
+    400008: floor075
+    400010: floor076
+    400012: GuardaVolumes049
+    400014: GuardaVolumes050
+    400016: GuardaVolumes051
+    400018: GuardaVolumes052
+    400020: //RootNode
+    400022: Object004
+    400024: Object005
+    400026: Object006
+    400028: Object007
+    400030: Overhead_Locker025
+    400032: Panel_Window_Glass024
+    400034: Panel_Window_shutter_245
+    400036: Panel_Window_shutter_246
+    400038: Panel_Window_shutter_247
+    400040: Panel_Window_shutter_248
+    400042: Panel_Window_shutter_249
+    400044: Panel_Window_shutter_250
+    400046: Panel_Window_shutter_251
+    400048: Panel_Window_shutter_252
+    400050: Placa numero
+    400052: Placa numero001
+    400054: Placa numero002
+    400056: Placa numero003
+    400058: Tela Poltrona
+    2300000: Cadeira_LOW
+    2300002: Cadeira_LOW003
+    2300004: Cadeira_LOW004
+    2300006: Cadeira_LOW005
+    2300008: floor075
+    2300010: floor076
+    2300012: GuardaVolumes049
+    2300014: GuardaVolumes050
+    2300016: GuardaVolumes051
+    2300018: GuardaVolumes052
+    2300020: Object004
+    2300022: Object005
+    2300024: Object006
+    2300026: Object007
+    2300028: Overhead_Locker025
+    2300030: Panel_Window_Glass024
+    2300032: Panel_Window_shutter_245
+    2300034: Panel_Window_shutter_246
+    2300036: Panel_Window_shutter_247
+    2300038: Panel_Window_shutter_248
+    2300040: Panel_Window_shutter_249
+    2300042: Panel_Window_shutter_250
+    2300044: Panel_Window_shutter_251
+    2300046: Panel_Window_shutter_252
+    2300048: Placa numero
+    2300050: Placa numero001
+    2300052: Placa numero002
+    2300054: Placa numero003
+    2300056: Tela Poltrona
+    3300000: Cadeira_LOW
+    3300002: Cadeira_LOW003
+    3300004: Cadeira_LOW004
+    3300006: Cadeira_LOW005
+    3300008: floor075
+    3300010: floor076
+    3300012: GuardaVolumes049
+    3300014: GuardaVolumes050
+    3300016: GuardaVolumes051
+    3300018: GuardaVolumes052
+    3300020: Object004
+    3300022: Object005
+    3300024: Object006
+    3300026: Object007
+    3300028: Overhead_Locker025
+    3300030: Panel_Window_Glass024
+    3300032: Panel_Window_shutter_245
+    3300034: Panel_Window_shutter_246
+    3300036: Panel_Window_shutter_247
+    3300038: Panel_Window_shutter_248
+    3300040: Panel_Window_shutter_249
+    3300042: Panel_Window_shutter_250
+    3300044: Panel_Window_shutter_251
+    3300046: Panel_Window_shutter_252
+    3300048: Placa numero
+    3300050: Placa numero001
+    3300052: Placa numero002
+    3300054: Placa numero003
+    3300056: Tela Poltrona
+    4300000: Overhead_Locker025
+    4300002: floor075
+    4300004: floor076
+    4300006: GuardaVolumes049
+    4300008: Panel_Window_shutter_245
+    4300010: Panel_Window_shutter_246
+    4300012: Panel_Window_shutter_247
+    4300014: Panel_Window_shutter_248
+    4300016: Panel_Window_shutter_249
+    4300018: Panel_Window_shutter_250
+    4300020: Panel_Window_shutter_251
+    4300022: Panel_Window_shutter_252
+    4300024: Panel_Window_Glass024
+    4300026: GuardaVolumes050
+    4300028: GuardaVolumes051
+    4300030: GuardaVolumes052
+    4300032: Cadeira_LOW
+    4300034: Cadeira_LOW003
+    4300036: Cadeira_LOW004
+    4300038: Cadeira_LOW005
+    4300040: Tela Poltrona
+    4300042: Placa numero
+    4300044: Placa numero001
+    4300046: Placa numero002
+    4300048: Placa numero003
+    4300050: Object004
+    4300052: Object005
+    4300054: Object006
+    4300056: Object007
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
