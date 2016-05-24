@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyingPhobiaProject.CSharp.Plugins", "FlyingPhobiaProject.CSharp.Plugins.csproj", "{B1703191-4AEB-577C-D8E7-A3012F7807B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyingPhobiaProject.CSharp", "FlyingPhobiaProject.CSharp.csproj", "{EC3193AC-6982-5A54-0603-371CCC242672}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlyingPhobiaProject.CSharp.Editor", "FlyingPhobiaProject.CSharp.Editor.csproj", "{0059D16E-6A4D-9D8E-B857-AF77FAD3F077}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B1703191-4AEB-577C-D8E7-A3012F7807B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1703191-4AEB-577C-D8E7-A3012F7807B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1703191-4AEB-577C-D8E7-A3012F7807B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1703191-4AEB-577C-D8E7-A3012F7807B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC3193AC-6982-5A54-0603-371CCC242672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3193AC-6982-5A54-0603-371CCC242672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3193AC-6982-5A54-0603-371CCC242672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3193AC-6982-5A54-0603-371CCC242672}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0059D16E-6A4D-9D8E-B857-AF77FAD3F077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0059D16E-6A4D-9D8E-B857-AF77FAD3F077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0059D16E-6A4D-9D8E-B857-AF77FAD3F077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0059D16E-6A4D-9D8E-B857-AF77FAD3F077}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

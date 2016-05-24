@@ -45,7 +45,7 @@ public class TakeOffPlane : MonoBehaviour {
         //continua acelerando para a decolagem
         if (acelerar == true)
         {
-            VelocidadeAtual = VelocidadeAtual + VelocidadeAceleracao * Time.deltaTime;
+            VelocidadeAtual = VelocidadeAtual + VelocidadeAceleracao/2 * Time.deltaTime;
         }
 
         // verifica a velocidade  -- não deixa ficar muito rápido
@@ -58,7 +58,7 @@ public class TakeOffPlane : MonoBehaviour {
         }
 
         // verica a velocidade e decola
-        if (VelocidadeAtual >= (VelocidadeMax / 3) && decolar == false && acelerar == true)
+        if (VelocidadeAtual >= (VelocidadeMax/8) && decolar == false && acelerar == true)
         {
             transform.Rotate(RotacaoDecolagem, 0, RotacaoDecolagem);
             RotacaoDecolagem = RotacaoDecolagem + RotacaoDecolagem / 2;
