@@ -34,7 +34,7 @@ public class EstacionarAviao : MonoBehaviour {
 
         contador += Time.deltaTime;//comaça a contar o tempo para iniciar a parada
 
-        if (contador >= 60) //depois de 1 minuto será iniciado o procedimento de parada
+        if (contador >= 10) //depois de 1 minuto será iniciado o procedimento de parada
         {       
 
             //começar aceleração
