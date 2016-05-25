@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: 15f7bffd5128f5f4c815c5575ee4243f
+timeCreated: 1463174337
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Aviao Vidros Externos
+    100002: //RootNode
+    100004: Limpa Vidro
+    100006: Object022
+    100008: Porta 002
+    100010: Porta 003
+    100012: Porta 004
+    100014: Porta 005
+    100016: Porta 006
+    100018: Porta 01
+    100020: Porta Aviao
+    100022: "Porta Avi\xE3o"
+    100024: "Porta Avi\xE3o001"
+    100026: "Porta Avi\xE3o002"
+    100028: "Porta Avi\xE3o003"
+    100030: "Porta Avi\xE3o004"
+    100032: "Porta Avi\xE3o005"
+    100034: Vidro Porta 002
+    100036: Vidro Porta 003
+    100038: Vidro Porta 004
+    100040: Vidro Porta 005
+    100042: Vidro Porta 006
+    100044: Vidro Porta 01
+    400000: Aviao Vidros Externos
+    400002: //RootNode
+    400004: Limpa Vidro
+    400006: Object022
+    400008: Porta 002
+    400010: Porta 003
+    400012: Porta 004
+    400014: Porta 005
+    400016: Porta 006
+    400018: Porta 01
+    400020: Porta Aviao
+    400022: "Porta Avi\xE3o"
+    400024: "Porta Avi\xE3o001"
+    400026: "Porta Avi\xE3o002"
+    400028: "Porta Avi\xE3o003"
+    400030: "Porta Avi\xE3o004"
+    400032: "Porta Avi\xE3o005"
+    400034: Vidro Porta 002
+    400036: Vidro Porta 003
+    400038: Vidro Porta 004
+    400040: Vidro Porta 005
+    400042: Vidro Porta 006
+    400044: Vidro Porta 01
+    2300000: Aviao Vidros Externos
+    2300002: Limpa Vidro
+    2300004: Object022
+    2300006: Porta 002
+    2300008: Porta 003
+    2300010: Porta 004
+    2300012: Porta 005
+    2300014: Porta 006
+    2300016: Porta 01
+    2300018: Vidro Porta 002
+    2300020: Vidro Porta 003
+    2300022: Vidro Porta 004
+    2300024: Vidro Porta 005
+    2300026: Vidro Porta 006
+    2300028: Vidro Porta 01
+    3300000: Aviao Vidros Externos
+    3300002: Limpa Vidro
+    3300004: Object022
+    3300006: Porta 002
+    3300008: Porta 003
+    3300010: Porta 004
+    3300012: Porta 005
+    3300014: Porta 006
+    3300016: Porta 01
+    3300018: Vidro Porta 002
+    3300020: Vidro Porta 003
+    3300022: Vidro Porta 004
+    3300024: Vidro Porta 005
+    3300026: Vidro Porta 006
+    3300028: Vidro Porta 01
+    4300000: Limpa Vidro
+    4300002: Aviao Vidros Externos
+    4300004: Object022
+    4300006: Porta 005
+    4300008: Vidro Porta 005
+    4300010: Porta 004
+    4300012: Vidro Porta 004
+    4300014: Porta 01
+    4300016: Vidro Porta 01
+    4300018: Porta 002
+    4300020: Vidro Porta 002
+    4300022: Porta 003
+    4300024: Vidro Porta 003
+    4300026: Porta 006
+    4300028: Vidro Porta 006
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

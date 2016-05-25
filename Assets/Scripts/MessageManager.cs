@@ -1,0 +1,94 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using UnityEngine;
+
+
+public  class MessageManager:MonoBehaviour{
+
+    [SerializeField]
+    private Turbulence turbulenceScript;
+
+    [SerializeField]
+    private GameObject silverLiningObject;
+
+    private SilverLining silverLining;
+
+    [SerializeField]
+    private GameObject rain;
+
+    [SerializeField]
+    private GameObject thunder;
+
+    private enum ClimateStates { aberto, nublado, chuvoso, temporal }
+    void Start()
+    {
+        silverLining = silverLiningObject.GetComponent<SilverLining>();
+        
+
+
+    }
+
+
+    public void handleTurbulence(string toggle)
+    {
+
+        turbulenceScript.Multiplier = Int32.Parse(toggle);
+    }
+
+
+    public void handleStressLevels(string toggle)
+    {
+
+        //turbulenceScript.Multiplier = Int32.Parse(toggle);
+    }
+
+    public void handleTime(string time)
+    {
+        string[] words = time.Split(':');
+        silverLining.hour = Int32.Parse(words[0]);
+        silverLining.minutes = Int32.Parse(words[1]);
+
+    }
+
+
+
+
+
+
+    //private enum ClimateStates { aberto, nublado, chuvoso, temporal }
+    public void handleClimate(int clima)
+    {
+        switch(clima)
+        {
+            case 0:
+                silverLining.hasStratusClouds = false;
+                rain.SetActive(false);
+                thunder.SetActive(false);
+                break;
+            case 1:
+                silverLining.hasStratusClouds = true;
+                rain.SetActive(false);
+                thunder.SetActive(false);
+                silverLining.stratusThickness = 0.7f;
+                break;
+            case 2:
+                silverLining.hasStratusClouds = true;
+                rain.SetActive(true);
+                thunder.SetActive(false);
+                silverLining.stratusThickness = 0.8f;
+                break;
+
+            case 3:
+                silverLining.hasStratusClouds = true;
+                rain.SetActive(true);
+                //rain.
+                thunder.SetActive(true);
+                silverLining.stratusThickness = 1.0f;
+                break;
+        }
+        
+    }
+}
+

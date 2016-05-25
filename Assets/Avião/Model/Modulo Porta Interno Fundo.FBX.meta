@@ -1,0 +1,126 @@
+fileFormatVersion: 2
+guid: 01005d331b1b2a946a997e2a7968e6a0
+timeCreated: 1463171553
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Cortina001
+    100002: Divisoria006
+    100004: floor104
+    100006: GuardaVolumes104
+    100008: GuardaVolumes105
+    100010: GuardaVolumes106
+    100012: GuardaVolumes107
+    100014: interior_Cortina001
+    100016: Interior_Portas003
+    100018: //RootNode
+    100020: Object018
+    100022: Object019
+    400000: Cortina001
+    400002: Divisoria006
+    400004: floor104
+    400006: GuardaVolumes104
+    400008: GuardaVolumes105
+    400010: GuardaVolumes106
+    400012: GuardaVolumes107
+    400014: interior_Cortina001
+    400016: Interior_Portas003
+    400018: //RootNode
+    400020: Object018
+    400022: Object019
+    2300000: Cortina001
+    2300002: Divisoria006
+    2300004: floor104
+    2300006: GuardaVolumes104
+    2300008: GuardaVolumes105
+    2300010: GuardaVolumes106
+    2300012: GuardaVolumes107
+    2300014: interior_Cortina001
+    2300016: Interior_Portas003
+    2300018: Object018
+    2300020: Object019
+    3300000: Cortina001
+    3300002: Divisoria006
+    3300004: floor104
+    3300006: GuardaVolumes104
+    3300008: GuardaVolumes105
+    3300010: GuardaVolumes106
+    3300012: GuardaVolumes107
+    3300014: interior_Cortina001
+    3300016: Interior_Portas003
+    3300018: Object018
+    3300020: Object019
+    4300000: Interior_Portas003
+    4300002: GuardaVolumes107
+    4300004: GuardaVolumes105
+    4300006: Cortina001
+    4300008: Divisoria006
+    4300010: interior_Cortina001
+    4300012: Object019
+    4300014: Object018
+    4300016: GuardaVolumes106
+    4300018: floor104
+    4300020: GuardaVolumes104
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

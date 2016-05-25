@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/aeroporto-cena.unity
+  isLoaded: 1
+  isActive: 1
