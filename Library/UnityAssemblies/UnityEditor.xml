@@ -2165,15 +2165,6 @@ Units is normalized time.</para>
         <para>Array of asset bundle names.</para>
       </returns>
     </member>
-    <member name="M:UnityEditor.AssetDatabase.GetAssetDependencyHashFromPath(System.String)">
-      <summary>
-        <para>Returns the hash of all the dependencies of an asset. The hash aggregates the following: the source asset path, the source asset, the meta file, the target platform, and the importer version.</para>
-      </summary>
-      <param name="path">Path to the asset.</param>
-      <returns>
-        <para>Aggregate hash.</para>
-      </returns>
-    </member>
     <member name="M:UnityEditor.AssetDatabase.GetAssetOrScenePath(UnityEngine.Object)">
       <summary>
         <para>Returns the path name relative to the project folder where the asset is stored.</para>
@@ -17215,11 +17206,6 @@ To force a reload of the mask, simply set  ModelImporterClipAnimation.maskSource
         <para></para>
       </summary>
     </member>
-    <member name="F:UnityEditor.PlayerSettings.TizenCapability.AppManagerLaunch">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="F:UnityEditor.PlayerSettings.TizenCapability.Bluetooth">
       <summary>
         <para></para>
@@ -17246,11 +17232,6 @@ To force a reload of the mask, simply set  ModelImporterClipAnimation.maskSource
       </summary>
     </member>
     <member name="F:UnityEditor.PlayerSettings.TizenCapability.CallHistoryWrite">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:UnityEditor.PlayerSettings.TizenCapability.Camera">
       <summary>
         <para></para>
       </summary>
@@ -17300,16 +17281,6 @@ To force a reload of the mask, simply set  ModelImporterClipAnimation.maskSource
         <para></para>
       </summary>
     </member>
-    <member name="F:UnityEditor.PlayerSettings.TizenCapability.Haptic">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:UnityEditor.PlayerSettings.TizenCapability.Internet">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
     <member name="F:UnityEditor.PlayerSettings.TizenCapability.KeyManager">
       <summary>
         <para></para>
@@ -17321,11 +17292,6 @@ To force a reload of the mask, simply set  ModelImporterClipAnimation.maskSource
       </summary>
     </member>
     <member name="F:UnityEditor.PlayerSettings.TizenCapability.Location">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:UnityEditor.PlayerSettings.TizenCapability.MediaStorage">
       <summary>
         <para></para>
       </summary>
@@ -17391,11 +17357,6 @@ To force a reload of the mask, simply set  ModelImporterClipAnimation.maskSource
       </summary>
     </member>
     <member name="F:UnityEditor.PlayerSettings.TizenCapability.Shortcut">
-      <summary>
-        <para></para>
-      </summary>
-    </member>
-    <member name="F:UnityEditor.PlayerSettings.TizenCapability.SystemSettings">
       <summary>
         <para></para>
       </summary>
