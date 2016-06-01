@@ -7,8 +7,9 @@ public class Turbulence : MonoBehaviour {
     float speed = 1000.0f; //how fast it shakes
    // float amount = 1.0f; //how much it shakes
     bool turbulence = false;
-
-    float multiplier = 1;
+    bool once = false;
+    int lastMultiplier;
+    float multiplier = 0;
     int i = 0;
     int hi = 0;
     [SerializeField]
@@ -26,6 +27,7 @@ public class Turbulence : MonoBehaviour {
     }
     bool hturbulence = false;
 	void Start () {
+        lastMultiplier = 0;
 	
 	}
 	
@@ -34,12 +36,17 @@ public class Turbulence : MonoBehaviour {
      */
 	// Update is called once per frame
 	void Update () {
-        if(Input.GetKeyDown(KeyCode.T))
+        if(Input.GetKeyDown(KeyCode.T) || multiplier!=0)
         {
            // Multiplier = 1;
-            turbulence = !turbulence;
+            if (once == false)
+            {
+                turbulence = !turbulence;
+                once = true;
+                lastMultiplier = (int)multiplier;
+            }
         }
-
+        
         if (Input.GetKeyDown(KeyCode.P))
         {
           //  Multiplier = 1;
@@ -48,6 +55,13 @@ public class Turbulence : MonoBehaviour {
 
         startTurbulence();
         startHorizontalTurbulence();
+        if (lastMultiplier != multiplier)
+        {
+            if(once==true)
+            {
+                once = false;
+            }
+        }
 	
 	}
     

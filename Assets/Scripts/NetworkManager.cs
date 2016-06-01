@@ -15,6 +15,7 @@ public class NetworkManager : MonoBehaviour {
 
     void Awake()
     {
+       // messageManager = new MessageManager();
         instance = InformationSaver.getInstance();
         #if UNITY_EDITOR
             Debug.Log("Unity Editor");

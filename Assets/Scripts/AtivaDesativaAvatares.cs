@@ -29,7 +29,7 @@ public class AtivaDesativaAvatares : MonoBehaviour {
 
     void OnCollisionEnter(Collision Col)
     {
-        Debug.Log(Col.gameObject.name);
+       // Debug.Log(Col.gameObject.name);
         if(Col.gameObject.name == "Saida_Corredor")
         {
             avataresSala.SetActive(false);
