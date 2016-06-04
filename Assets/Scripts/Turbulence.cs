@@ -36,7 +36,16 @@ public class Turbulence : MonoBehaviour {
      */
 	// Update is called once per frame
 	void Update () {
-        if(Input.GetKeyDown(KeyCode.T) || multiplier!=0)
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+          
+            if (multiplier == 0)
+                multiplier = 1;
+
+            else 
+                multiplier = 0;
+        }
+        if( multiplier!=0)
         {
            // Multiplier = 1;
             if (once == false)
@@ -52,6 +61,7 @@ public class Turbulence : MonoBehaviour {
           //  Multiplier = 1;
             hturbulence = !hturbulence;
         }
+        
 
         startTurbulence();
         startHorizontalTurbulence();

@@ -119,15 +119,17 @@ public class TakeOff : MonoBehaviour
         // transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, transform.rotation.y, 30), 2 * Time.deltaTime);
         Debug.Log("to no climb");
 
-        if (speed < 200)
+        if (speed < 700)
         {
             transform.position -= transform.forward * Time.deltaTime * 20f;
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 45, 0), Time.deltaTime);
+           
             speed++;
         }
 
-        else if (speed < 300)
+        else if (speed < 900)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(45, 150, 0), Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(45,45, 0), Time.deltaTime);
             //Quaternion newPiece = transform.rotation * Quaternion.Euler(0, 5, 0);
             transform.position -= transform.forward * Time.deltaTime * 20f;
             transform.position += new Vector3(0, 1, 0);
