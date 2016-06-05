@@ -13,19 +13,22 @@ public class TimeAndWeatherControl : MonoBehaviour
     private GameObject rain;
     [SerializeField]
     private GameObject thunder;
-
+    private MessageManager messageManager;
     private SilverLining silverLining;
 
     public int hour, minute, seconds;
     public bool isActive;
+    private InformationSaver instance;
 
     //Overwrite silverlining
     void Start()
     {
+        instance = InformationSaver.getInstance();
         silverLining = silverLiningObject.GetComponent<SilverLining>();
-        silverLining.hour = hour;
-        silverLining.minutes = minute;
-        silverLining.seconds = seconds;
+      //  messageManager = new MessageManager();
+        //silverLining.hour = hour;
+        //silverLining.minutes = minute;
+        //silverLining.seconds = seconds;
 
 
     }
@@ -41,18 +44,18 @@ public class TimeAndWeatherControl : MonoBehaviour
         //silverLining.hour = hour;
         //silverLining.minutes = minute;
         //silverLining.seconds = seconds;
-        rain.SetActive(isActive);
-
-        if (Input.GetKeyDown(KeyCode.R))
+        
+       // thunder.SetActive(isActive);
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             isActive = !isActive;
-
+            rain.SetActive(isActive);
+            silverLining.hasStratusClouds = isActive;
+            
         }
 
-        if (isActive)
-            startRaining();
-        else
-            stopRaining();
+       
+        //    stopRaining();
     }
 
     private void stopRaining()
@@ -69,10 +72,10 @@ public class TimeAndWeatherControl : MonoBehaviour
     {
         //    silverLining.cumulusBrightness = 0.3f;
         //silverLining.cumulusCoverage = 0.9f;
-        silverLining.hasStratusClouds = true;
+        //silverLining.hasStratusClouds = true;
         //silverLining.enableStratusClouds();
-        rain.SetActive(isActive);
-        thunder.SetActive(isActive);
+        //rain.SetActive(isActive);
+        //thunder.SetActive(isActive);
         // isActive = !isActive;
         //change cumulus cloud color and it's density here.
 
