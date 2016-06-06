@@ -11,6 +11,8 @@ public class TakeOff : MonoBehaviour
     private CharacterController chController;
     [SerializeField]
     private GameObject oculusController;
+    
+
     bool hasNormalized = false;
     int i = 0;
     
@@ -47,6 +49,8 @@ public class TakeOff : MonoBehaviour
         // currentState = PlaneStates.waitingVideo;
         chController = oculusController.GetComponent<CharacterController>();
         sitDownScript = Seat.GetComponent<SitDown>();
+
+
     }
 
     // Update is called once per frame
@@ -82,7 +86,7 @@ public class TakeOff : MonoBehaviour
         if (speed < 100)
         {
             // Debug.Log("lol");
-            transform.position += transform.forward * Time.deltaTime * 20f;
+            transform.position += transform.forward * Time.deltaTime * 35f;
             speed++;
         }
         else
@@ -122,7 +126,7 @@ public class TakeOff : MonoBehaviour
         if (speed < 700)
         {
             transform.position -= transform.forward * Time.deltaTime * 20f;
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 45, 0), Time.deltaTime);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 90, 0), Time.deltaTime);
            
             speed++;
         }

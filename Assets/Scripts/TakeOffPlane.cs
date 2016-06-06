@@ -12,6 +12,9 @@ public class TakeOffPlane : MonoBehaviour {
     // controla as rotações do aviao
     float RotacaoDecolagem;
 
+    // audio aviao
+    public AudioSource sAviaoDecolando;
+
     // controle
     public bool decolar;
     public bool acelerar;
@@ -28,6 +31,7 @@ public class TakeOffPlane : MonoBehaviour {
         acelerar = false;
 
         RotacaoDecolagem = 1;
+        sAviaoDecolando.Stop();
     }
 	
 	// Update is called once per frame
@@ -36,10 +40,11 @@ public class TakeOffPlane : MonoBehaviour {
         
         /** ACELERAÇÃO **/
         // mexer o mouse -- o aviao será acelerado 
-        if (Input.GetAxis("Mouse Y") != 0 || Input.GetAxis("Mouse X") != 0 && acelerar == false)
+        if (Input.GetKeyDown(KeyCode.L)  && acelerar == false)
         {
             acelerar = true;
             VelocidadeAtual = VelocidadeAtual + VelocidadeAceleracao * Time.deltaTime;
+            sAviaoDecolando.Play();
         }
 
         //continua acelerando para a decolagem

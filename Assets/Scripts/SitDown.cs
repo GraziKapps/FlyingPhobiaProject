@@ -26,6 +26,11 @@ public class SitDown : MonoBehaviour
     private AudioSource engineAudio;
     private AudioSource movieAudio;
 
+    // Avatares que o controlador não vê
+    private GameObject avatares1;
+    private GameObject avatares2;
+    private GameObject avatares3;
+
     //[SerializeField]
    // private GameObject airport;
 
@@ -44,6 +49,11 @@ public class SitDown : MonoBehaviour
         movieAudio = moviePlayer.GetComponent<AudioSource>();
        // airportChatterAudio = airport.GetComponent<AudioSource>();  
 
+        // avatares que o controlador não vê
+        avatares1 = GameObject.Find("avataresAviao01");
+        avatares2 = GameObject.Find("avataresAviao02");
+        avatares3 = GameObject.Find("avataresAviao03");
+
     }
 
     // Update is called once per frame
@@ -59,6 +69,11 @@ public class SitDown : MonoBehaviour
     {
         Debug.Log("Sentou!");
 
+        // Desativa os avatares que o controlador não vê
+        avatares1.SetActive(false);
+        avatares2.SetActive(false);
+        avatares3.SetActive(false);
+
         foreach (GameObject a in arrowSigns)
             GameObject.Destroy(a);
 
@@ -68,8 +83,8 @@ public class SitDown : MonoBehaviour
         aux = new Vector3((float)cameraRig.transform.localPosition.x, -10, (float)cameraRig.transform.localPosition.z);
         oculusController.transform.position = new Vector3(
             oculusController.transform.position.x - 0.2125f, 
-            oculusController.transform.position.y - 0.35f,
-            oculusController.transform.position.z + 0.3f);
+            oculusController.transform.position.y - 0.2f,
+            oculusController.transform.position.z + 0.25f);
         // cameraRig.localPosition =  Vector3.Lerp(cameraRig.transform.localPosition, aux, Time.deltaTime*2);
         chController.enabled = false;
     

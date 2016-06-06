@@ -4,17 +4,19 @@ using System.Collections;
 public class PlayMovie : MonoBehaviour
 {
     public MovieTexture movTexture;
+    public Texture2D mapTexture;
     [SerializeField]
     private AudioSource commandersVoice;
     void Start()
     {
-        GetComponent<Renderer>().material.mainTexture = movTexture;
+        
         
        // movTexture.Play();
     }
 
    public void ActuallyPlay(AudioSource audio)
     {
+        GetComponent<Renderer>().material.mainTexture = movTexture;
         audio.Play();
         movTexture.Play();
         StartCoroutine(waitSeconds());
@@ -27,6 +29,7 @@ public class PlayMovie : MonoBehaviour
        yield return new WaitForSeconds(160);
        //StartFlying();
        //  Debug.Log("Acabouuu!!! É tetraaaaa!");
+       GetComponent<Renderer>().material.mainTexture = mapTexture;
        playCommanderMessage();
    }
 
