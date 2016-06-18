@@ -83,7 +83,7 @@ public class TakeOff : MonoBehaviour
 
     void PullBack()
     {
-        if (speed < 100)
+        if (speed < 120)
         {
             // Debug.Log("lol");
             transform.position += transform.forward * Time.deltaTime * 35f;
@@ -154,18 +154,18 @@ public class TakeOff : MonoBehaviour
         
 
         //funciona mais ou menos... agora ver como sair disso pra outra etapa
-      if(i < 300)
+      if(i < 200)
         {
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-45, -150, 0), Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-45, 0, 0), Time.deltaTime);
         //Quaternion newPiece = transform.rotation * Quaternion.Euler(0, 5, 0);
         transform.position -= transform.forward * Time.deltaTime * 20f;
         transform.position -= new Vector3(0, 1, 0);
         Debug.Log("???");
           i++;
         }
-      else if (i < 600)
+      else if (i < 400)
       {
-          transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 150, 0), Time.deltaTime);
+          transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 0), Time.deltaTime);
           Debug.Log("WUWIWUIW");
 
           
@@ -178,39 +178,41 @@ public class TakeOff : MonoBehaviour
       }
       else
       {
-          airportPosition = new Vector3(transform.position.x, transform.position.y -7, transform.position.z);
+          //subtrair de z
+          airportPosition = new Vector3(transform.position.x+18, transform.position.y -6 , transform.position.z - 6);
 
           parentposition = GameObject.FindGameObjectWithTag("Spawn").transform;
+         // parentposition.transform.rotation = Quaternion.Euler(0, 150, 0);
           Instantiate(airport, airportPosition, Quaternion.identity);
           currentState = PlaneStates.stop;
 
           
           // get sphere position. // instantiate from child does not make sense.
          
-          Vector3 parentpositionVector = new Vector3(parentposition.position.x, parentposition.position.y, parentposition.position.z);
-          GameObject newcorridor =(GameObject)Instantiate(corridor, parentpositionVector, Quaternion.identity);
+         // Vector3 parentpositionVector = new Vector3(parentposition.position.x, parentposition.position.y, parentposition.position.z);
+         // GameObject newcorridor =(GameObject)Instantiate(corridor, parentpositionVector, Quaternion.identity);
 
-          newcorridor.transform.rotation = Quaternion.Euler(0, 141.6595f, 0);
+        //  newcorridor.transform.rotation = Quaternion.Euler(0, 141.6595f, 0);
           
           //tá pegando do antigo... tenho que pegar o novo... como?
 
 
 
-          parentpositionRoom = newcorridor.transform.FindChild("Corredor de Embarque").FindChild("RoomIn").transform ;          
-          Debug.Log(parentpositionRoom.position.x);
+         // parentpositionRoom = newcorridor.transform.FindChild("Corredor de Embarque").FindChild("RoomIn").transform ;          
+         // Debug.Log(parentpositionRoom.position.x);
 
           // get sphere position. // instantiate from child does not make sense.
          
-          Vector3 parentpositionRoomVector = new Vector3(parentpositionRoom.position.x, parentpositionRoom.position.y, parentpositionRoom.position.z);
-          GameObject newRoom = (GameObject)Instantiate(waitRoom, parentpositionRoomVector, Quaternion.identity);
-          newRoom.transform.rotation = Quaternion.Euler(0, 102.6279f, 0);
+        //  Vector3 parentpositionRoomVector = new Vector3(parentpositionRoom.position.x, parentpositionRoom.position.y, parentpositionRoom.position.z);
+         // GameObject newRoom = (GameObject)Instantiate(waitRoom, parentpositionRoomVector, Quaternion.identity);
+         // newRoom.transform.rotation = Quaternion.Euler(0, 102.6279f, 0);
 
           //newcorridor.transform.rotation = Quaternion.Euler(0, 107.1242f, 0);
           //reset oculus position
          // int l=0;
-          Debug.Log("BU" + oculusController.transform.parent);
+          //Debug.Log("BU" + oculusController.transform.parent);
          // while(l < 300){
-          transform.DetachChildren();
+         // transform.DetachChildren();
           sitDownScript.reenable();
           
         //  l++;
