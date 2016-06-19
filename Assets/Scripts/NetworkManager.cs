@@ -159,6 +159,21 @@ public class NetworkManager : MonoBehaviour {
 
     }
 
+    [RPC]
+    void receiveLapseChange(string lapse)
+    {
+        Debug.Log("New lapse is  " + lapse);
+        messageManager.handleNewLape(lapse);
+
+    }
+
+    [RPC]
+    void receiveDownChange(bool isDown)
+    {
+        Debug.Log("ITS GOING DOWN BOYS");
+        messageManager.handleDown();
+    }
+
     void OnConnectedToServer()
     {
         Debug.Log("Server Joined");

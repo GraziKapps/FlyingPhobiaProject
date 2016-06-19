@@ -22,8 +22,15 @@ public class TakeOff : MonoBehaviour
     }
 
     //enum for plane current states
-    enum PlaneStates { pullback, taxiout, climb, cruise, fall,stop };
+    public enum PlaneStates { pullback, taxiout, climb, cruise, fall,stop };
     PlaneStates currentState;
+
+    public PlaneStates CurrentState
+    {
+        get { return currentState; }
+        set { currentState = value; }
+    }
+
     private Vector3 airportPosition;
     
     [SerializeField]

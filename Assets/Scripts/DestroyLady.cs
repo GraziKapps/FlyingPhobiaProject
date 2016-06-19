@@ -7,7 +7,10 @@ public class DestroyLady : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         Debug.Log("Ha");
-        if(other.tag=="Lady")
-        Destroy(other.gameObject);
+        if (other.tag == "Lady")
+        {
+            Destroy(other.gameObject);
+            Debug.Log("Destroyed");
+        }
     }
 }

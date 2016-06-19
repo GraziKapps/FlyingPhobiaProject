@@ -21,11 +21,15 @@ public  class MessageManager:MonoBehaviour{
     [SerializeField]
     private GameObject thunder;
 
+    [SerializeField]
+    private GameObject takeOffReference;
+
+    private TakeOff takeOffScript;
     private enum ClimateStates { aberto, nublado, chuvoso, temporal }
     void Start()
     {
         silverLining = silverLiningObject.GetComponent<SilverLining>();
-        
+        takeOffScript = takeOffReference.GetComponent<TakeOff>();
 
 
     }
@@ -89,6 +93,27 @@ public  class MessageManager:MonoBehaviour{
                 break;
         }
         
+    }
+
+    public void handleDown()
+    {
+        if (takeOffScript.CurrentState == TakeOff.PlaneStates.cruise)
+        {
+            takeOffScript.CurrentState = TakeOff.PlaneStates.fall;
+            Debug.Log("Caindo aaaaa"); 
+        }
+        else 
+        {
+            Debug.Log("Não pode!");
+        }
+        //throw new NotImplementedException();
+    }
+
+    public void handleNewLape(string lapse)
+    {
+        silverLining.continuousTimeAdvance = !silverLining.continuousTimeAdvance;
+         silverLining.continuousTimeAdvanceRate = float.Parse(lapse);
+        //throw new NotImplementedException();
     }
 }
 

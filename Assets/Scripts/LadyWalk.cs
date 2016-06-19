@@ -10,7 +10,7 @@ public class LadyWalk : MonoBehaviour {
         if (animator)
         {
             Vector3 newPosition = transform.position;
-            transform.position += transform.forward * animator.GetFloat("movement") * Time.deltaTime;
+            transform.position += transform.forward * animator.GetFloat("movement") * Time.deltaTime * 0.5f;
            }
     }
 }
