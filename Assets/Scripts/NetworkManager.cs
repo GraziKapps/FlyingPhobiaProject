@@ -25,6 +25,7 @@ public class NetworkManager : MonoBehaviour {
 
         if (instance.IsNetworked == true)
         {
+
             MasterServer.ipAddress = Network.player.ipAddress;
             MasterServer.port = 23466;
             // }
@@ -140,6 +141,13 @@ public class NetworkManager : MonoBehaviour {
         //send
     }
 
+    [RPC]
+    void receiveStressChange(string toggle)
+    {
+        Debug.Log("Active stress toggle is  " + toggle);
+        messageManager.handleStressLevels(toggle);
+        //send
+    }
     [RPC]
     void receiveTimeChange(string time)
     {

@@ -11,7 +11,8 @@ public class TakeOff : MonoBehaviour
     private CharacterController chController;
     [SerializeField]
     private GameObject oculusController;
-    
+    [SerializeField]
+    private AudioSource takeOffVoice;
 
     bool hasNormalized = false;
     int i = 0;
@@ -74,8 +75,10 @@ public class TakeOff : MonoBehaviour
 
     IEnumerator waitSeconds()
     {
+        yield return new WaitForSeconds(5);
         Debug.Log("Waiting Video at TakeOff..");
-        yield return new WaitForSeconds(50);
+        //4:09 minutes
+        yield return new WaitForSeconds(249);
         StartFlying();
         //  Debug.Log("Acabouuu!!! É tetraaaaa!");
     }
@@ -90,6 +93,8 @@ public class TakeOff : MonoBehaviour
 
     void PullBack()
     {
+        takeOffVoice.Play();
+
         if (speed < 120)
         {
             // Debug.Log("lol");
@@ -101,7 +106,7 @@ public class TakeOff : MonoBehaviour
             currentState = PlaneStates.taxiout;
             speed = 0;
         }
-
+        
     }
 
     void TaxiOut()

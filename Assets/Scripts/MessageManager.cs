@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public  class MessageManager:MonoBehaviour{
@@ -44,8 +45,13 @@ public  class MessageManager:MonoBehaviour{
 
     public void handleStressLevels(string toggle)
     {
-
+        int stress = Int32.Parse(toggle);
+        if(stress ==2)
+            SceneManager.LoadScene("mainScene");
+        else
         //turbulenceScript.Multiplier = Int32.Parse(toggle);
+
+        SceneManager.LoadScene(toggle);
     }
 
     public void handleTime(string time)
