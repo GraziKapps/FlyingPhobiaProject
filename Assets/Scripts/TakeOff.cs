@@ -166,6 +166,8 @@ public class TakeOff : MonoBehaviour
         
 
         //funciona mais ou menos... agora ver como sair disso pra outra etapa
+       if(i==0)
+           GetComponent<AudioSource>().Play();
       if(i < 200)
         {
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-45, 0, 0), Time.deltaTime);

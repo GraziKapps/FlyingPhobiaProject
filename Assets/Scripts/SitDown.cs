@@ -107,6 +107,7 @@ public class SitDown : MonoBehaviour
     }
     public void reenable()
     {
+        engineAudio.enabled = false;
         oculusController2.transform.position = new Vector3(
              oculusController.transform.position.x + 0.2125f,
              oculusController.transform.position.y + 0.35f,

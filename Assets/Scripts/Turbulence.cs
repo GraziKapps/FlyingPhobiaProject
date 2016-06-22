@@ -125,6 +125,6 @@ public class Turbulence : MonoBehaviour {
         else
             hi = 0;
         
-        Debug.Log("i é " + i);
+        Debug.Log("hi é " + hi + " " + turbulence);
     }
 }

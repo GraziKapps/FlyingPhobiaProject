@@ -26,7 +26,7 @@ public class PlayMovie : MonoBehaviour
    IEnumerator waitSeconds()
    {
        Debug.Log("Waiting Video ..");
-       yield return new WaitForSeconds(160);
+       yield return new WaitForSeconds(390);
        //StartFlying();
        //  Debug.Log("Acabouuu!!! É tetraaaaa!");
        GetComponent<Renderer>().material.mainTexture = mapTexture;
