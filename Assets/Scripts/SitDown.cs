@@ -121,10 +121,10 @@ public class SitDown : MonoBehaviour
     IEnumerator waitSeconds()
     {
         Debug.Log("Waiting... 4 seconds");
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(10);
         movie.ActuallyPlay(movieAudio);
         
-        yield return new WaitForSeconds(22);
+        yield return new WaitForSeconds(40);
         Debug.Log("Waiting... 30 seconds");
         engineBegin.enabled = true;
         yield return new WaitForSeconds(10);
