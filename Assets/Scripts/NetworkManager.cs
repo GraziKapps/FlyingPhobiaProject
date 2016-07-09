@@ -28,6 +28,7 @@ public class NetworkManager : MonoBehaviour {
 
             MasterServer.ipAddress = Network.player.ipAddress;
             MasterServer.port = 23466;
+            MasterServer.dedicatedServer = true;
             // }
             Debug.Log("Caralho");
             Application.OpenURL((Application.dataPath) + "/MS/MS.exe");
@@ -55,7 +56,7 @@ public class NetworkManager : MonoBehaviour {
                 // Network.InitializeServer();
                 //Network.
                 //MasterServer.RegisterHost(typeName, gameName);
-                Network.InitializeServer(4, 25000, !Network.HavePublicAddress());
+                Network.InitializeServer(4, 25000, false);
 
             MasterServer.RegisterHost(typeName, gameName);
         //}

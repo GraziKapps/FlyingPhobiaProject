@@ -167,8 +167,8 @@ public class TakeOff : MonoBehaviour
 
     private void Fall()
     {
-        
 
+        Debug.Log("caindo!");
         //funciona mais ou menos... agora ver como sair disso pra outra etapa
         if (i< 500) //esses valores tem que mudar na versão final! A diferença de fps mata!
         {
