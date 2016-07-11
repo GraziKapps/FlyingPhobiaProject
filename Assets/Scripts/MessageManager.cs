@@ -105,6 +105,7 @@ public  class MessageManager:MonoBehaviour{
     {
         if (takeOffScript.CurrentState == TakeOff.PlaneStates.cruise)
         {
+            takeOffReference.GetComponent<AudioSource>().Play();
             takeOffScript.CurrentState = TakeOff.PlaneStates.fall;
             Debug.Log("Caindo aaaaa"); 
         }
