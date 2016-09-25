@@ -184,7 +184,11 @@ public class TakeOff : MonoBehaviour
             Debug.Log("???");
             i++;
         }
+<<<<<<< HEAD
         else if (i < 1500)
+=======
+        else if (i < 1000)
+>>>>>>> c0fd1a7935f49aea1fe3760fa6a91a05f41cea7c
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 0), Time.deltaTime);
             Debug.Log("WUWIWUIW");
@@ -206,6 +210,7 @@ public class TakeOff : MonoBehaviour
             // parentposition.transform.rotation = Quaternion.Euler(0, 150, 0);
             Instantiate(airport, airportPosition, Quaternion.identity);
             currentState = PlaneStates.stop;
+<<<<<<< HEAD
 			AudioSource[] audios = GetComponents<AudioSource>();
 			foreach (AudioSource a in audios) {
 				a.Stop ();
@@ -214,6 +219,10 @@ public class TakeOff : MonoBehaviour
 			sitDownScript.engineFirst.GetComponent<AudioSource> ().Stop ();
 
 			//stop siubds
+=======
+
+
+>>>>>>> c0fd1a7935f49aea1fe3760fa6a91a05f41cea7c
             // get sphere position. // instantiate from child does not make sense.
 
             // Vector3 parentpositionVector = new Vector3(parentposition.position.x, parentposition.position.y, parentposition.position.z);
