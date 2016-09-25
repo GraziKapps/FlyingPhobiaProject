@@ -13,9 +13,12 @@ public class TakeOff : MonoBehaviour
     private GameObject oculusController;
     [SerializeField]
     private AudioSource takeOffVoice;
+    [SerializeField]
+    private AudioSource commandersVoice;
 
     bool hasNormalized = false;
     int i = 0;
+    int j=0;
     
     public Vector3 getPosition()
     {
@@ -75,10 +78,11 @@ public class TakeOff : MonoBehaviour
 
     IEnumerator waitSeconds()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(100);
         Debug.Log("Waiting Video at TakeOff..");
         //4:09 minutes
-        yield return new WaitForSeconds(249);
+        yield return new WaitForSeconds(15);
+        //249
         StartFlying();
         //  Debug.Log("Acabouuu!!! É tetraaaaa!");
     }
@@ -143,7 +147,7 @@ public class TakeOff : MonoBehaviour
             speed++;
         }
 
-        else if (speed < 900)
+        else if (speed < 1000)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(45,45, 0), Time.deltaTime);
             //Quaternion newPiece = transform.rotation * Quaternion.Euler(0, 5, 0);
@@ -163,79 +167,92 @@ public class TakeOff : MonoBehaviour
 
     private void Fall()
     {
-        
 
+        Debug.Log("caindo!");
         //funciona mais ou menos... agora ver como sair disso pra outra etapa
-      if(i < 200)
+        if (i< 500) //esses valores tem que mudar na versão final! A diferença de fps mata!
         {
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-45, 0, 0), Time.deltaTime);
-        //Quaternion newPiece = transform.rotation * Quaternion.Euler(0, 5, 0);
-        transform.position -= transform.forward * Time.deltaTime * 20f;
-        transform.position -= new Vector3(0, 1, 0);
-        Debug.Log("???");
-          i++;
+           // GetComponent<AudioSource>().Play();
+            i++;
         }
-      else if (i < 400)
-      {
-          transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 0), Time.deltaTime);
-          Debug.Log("WUWIWUIW");
-
-          
-          //   throw new Exception();
-          //-565.5881 y final position
-          //create new airport at this position.
-          //For now, just some sort of floor will do
-          i++;
-
-      }
-      else
-      {
-          //subtrair de z
-          airportPosition = new Vector3(transform.position.x+18, transform.position.y -6 , transform.position.z - 6);
-
-          parentposition = GameObject.FindGameObjectWithTag("Spawn").transform;
-         // parentposition.transform.rotation = Quaternion.Euler(0, 150, 0);
-          Instantiate(airport, airportPosition, Quaternion.identity);
-          currentState = PlaneStates.stop;
-
-          
-          // get sphere position. // instantiate from child does not make sense.
-         
-         // Vector3 parentpositionVector = new Vector3(parentposition.position.x, parentposition.position.y, parentposition.position.z);
-         // GameObject newcorridor =(GameObject)Instantiate(corridor, parentpositionVector, Quaternion.identity);
-
-        //  newcorridor.transform.rotation = Quaternion.Euler(0, 141.6595f, 0);
-          
-          //tá pegando do antigo... tenho que pegar o novo... como?
+        else if (i < 700)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(-45, 0, 0), Time.deltaTime);
+            //Quaternion newPiece = transform.rotation * Quaternion.Euler(0, 5, 0);
+            transform.position -= transform.forward * Time.deltaTime * 20f;
+            transform.position -= new Vector3(0, 1, 0);
+            Debug.Log("???");
+            i++;
+        }
+        else if (i < 1500)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 0), Time.deltaTime);
+            Debug.Log("WUWIWUIW");
 
 
+            //   throw new Exception();
+            //-565.5881 y final position
+            //create new airport at this position.
+            //For now, just some sort of floor will do
+            i++;
 
-         // parentpositionRoom = newcorridor.transform.FindChild("Corredor de Embarque").FindChild("RoomIn").transform ;          
-         // Debug.Log(parentpositionRoom.position.x);
+        }
+        else
+        {
+            //subtrair de z
+            airportPosition = new Vector3(transform.position.x + 18, transform.position.y - 6, transform.position.z - 6);
 
-          // get sphere position. // instantiate from child does not make sense.
-         
-        //  Vector3 parentpositionRoomVector = new Vector3(parentpositionRoom.position.x, parentpositionRoom.position.y, parentpositionRoom.position.z);
-         // GameObject newRoom = (GameObject)Instantiate(waitRoom, parentpositionRoomVector, Quaternion.identity);
-         // newRoom.transform.rotation = Quaternion.Euler(0, 102.6279f, 0);
+            parentposition = GameObject.FindGameObjectWithTag("Spawn").transform;
+            // parentposition.transform.rotation = Quaternion.Euler(0, 150, 0);
+            Instantiate(airport, airportPosition, Quaternion.identity);
+            currentState = PlaneStates.stop;
+			AudioSource[] audios = GetComponents<AudioSource>();
+			foreach (AudioSource a in audios) {
+				a.Stop ();
+			}
+			sitDownScript.engine.GetComponent<AudioSource> ().Stop ();
+			sitDownScript.engineFirst.GetComponent<AudioSource> ().Stop ();
 
-          //newcorridor.transform.rotation = Quaternion.Euler(0, 107.1242f, 0);
-          //reset oculus position
-         // int l=0;
-          //Debug.Log("BU" + oculusController.transform.parent);
-         // while(l < 300){
-         // transform.DetachChildren();
-          sitDownScript.reenable();
-          
-        //  l++;
-         // }
-      }
+			//stop siubds
+            // get sphere position. // instantiate from child does not make sense.
+
+            // Vector3 parentpositionVector = new Vector3(parentposition.position.x, parentposition.position.y, parentposition.position.z);
+            // GameObject newcorridor =(GameObject)Instantiate(corridor, parentpositionVector, Quaternion.identity);
+
+            //  newcorridor.transform.rotation = Quaternion.Euler(0, 141.6595f, 0);
+
+            //tá pegando do antigo... tenho que pegar o novo... como?
+
+
+
+            // parentpositionRoom = newcorridor.transform.FindChild("Corredor de Embarque").FindChild("RoomIn").transform ;          
+            // Debug.Log(parentpositionRoom.position.x);
+
+            // get sphere position. // instantiate from child does not make sense.
+
+            //  Vector3 parentpositionRoomVector = new Vector3(parentpositionRoom.position.x, parentpositionRoom.position.y, parentpositionRoom.position.z);
+            // GameObject newRoom = (GameObject)Instantiate(waitRoom, parentpositionRoomVector, Quaternion.identity);
+            // newRoom.transform.rotation = Quaternion.Euler(0, 102.6279f, 0);
+
+            //newcorridor.transform.rotation = Quaternion.Euler(0, 107.1242f, 0);
+            //reset oculus position
+            // int l=0;
+            //Debug.Log("BU" + oculusController.transform.parent);
+            // while(l < 300){
+            // transform.DetachChildren();
+            sitDownScript.reenable();
+
+            //  l++;
+            // }
+        }
         
 
     }
 
     private void Cruise()
     {
+        if(j==50)
+            commandersVoice.Play();
         //  if (transform.rotation.eulerAngles.y <= 261)
         // {
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 150, 0), Time.deltaTime);
@@ -246,7 +263,9 @@ public class TakeOff : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
             Debug.Log("pertei");
+            GetComponent<AudioSource>().Play();
             currentState = PlaneStates.fall;
+            
         }
         if (walkingLady != null)
         {
@@ -258,7 +277,7 @@ public class TakeOff : MonoBehaviour
             if(walkingLadyBack!=null)
                 StartCoroutine(waitSecondsWalkBack());
         }
-        
+        j++;
     }
 
 
@@ -306,8 +325,9 @@ public class TakeOff : MonoBehaviour
                 break;
 
             case PlaneStates.cruise:
-
+                
                 Cruise();
+                
                 break;
 
 

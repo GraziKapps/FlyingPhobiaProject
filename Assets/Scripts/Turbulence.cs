@@ -83,7 +83,7 @@ public class Turbulence : MonoBehaviour {
             
             if (i == 0)
                 StartCoroutine(waitSeconds());
-            if(i>=700)
+            if(i>=900)
                 transform.position = new Vector3(transform.position.x, transform.position.y, ((Mathf.Sin(Time.time * speed) / 100) * Multiplier) + transform.position.z);
             
             i++;
@@ -115,7 +115,7 @@ public class Turbulence : MonoBehaviour {
         {
             if (hi == 0)
                 StartCoroutine(waitSeconds());
-            if(hi>=700)
+            if(hi>=900)
                 transform.position = new Vector3(transform.position.x, ((Mathf.Sin(Time.time * speed) / 100) * Multiplier) + transform.position.y, transform.position.z);
             
             
@@ -125,6 +125,6 @@ public class Turbulence : MonoBehaviour {
         else
             hi = 0;
         
-        Debug.Log("i é " + i);
+        Debug.Log("hi é " + hi + " " + turbulence);
     }
 }

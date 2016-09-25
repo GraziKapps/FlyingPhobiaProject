@@ -107,6 +107,7 @@ public class SitDown : MonoBehaviour
     }
     public void reenable()
     {
+        engineAudio.enabled = false;
         oculusController2.transform.position = new Vector3(
              oculusController.transform.position.x + 0.2125f,
              oculusController.transform.position.y + 0.35f,
@@ -120,10 +121,10 @@ public class SitDown : MonoBehaviour
     IEnumerator waitSeconds()
     {
         Debug.Log("Waiting... 4 seconds");
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(10);
         movie.ActuallyPlay(movieAudio);
         
-        yield return new WaitForSeconds(22);
+        yield return new WaitForSeconds(40);
         Debug.Log("Waiting... 30 seconds");
         engineBegin.enabled = true;
         yield return new WaitForSeconds(10);
